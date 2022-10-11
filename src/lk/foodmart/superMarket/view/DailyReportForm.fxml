@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apnMain" prefHeight="1041.0" prefWidth="1819.0" style="-fx-background-color: #e1e1e1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.foodmart.superMarket.controller.DailyReportFormController">
+   <children>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="29.0" layoutY="28.0" onMouseClicked="#backMouseClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/down.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e1e1" height="34.0" layoutX="246.0" layoutY="56.0" stroke="#a905b5" strokeType="INSIDE" width="208.0" />
+      <TextField fx:id="txtSearchYear" layoutX="281.0" layoutY="61.0" onKeyReleased="#searchYearKeyReleased" prefHeight="25.0" prefWidth="160.0" promptText="year" style="-fx-background-color: #e1e1e1;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e1e1" height="34.0" layoutX="568.0" layoutY="56.0" stroke="#a905b5" strokeType="INSIDE" width="208.0" />
+      <Label layoutX="184.0" layoutY="65.0" prefHeight="21.0" prefWidth="45.0" text="Year ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="509.0" layoutY="65.0" prefHeight="21.0" prefWidth="45.0" text="Month">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbSelectMonth" layoutX="581.0" layoutY="61.0" prefHeight="25.0" prefWidth="188.0" promptText="Select Month" style="-fx-background-color: #e1e1e1;" />
+      <TableView fx:id="tblDailyView" layoutX="138.0" layoutY="196.0" prefHeight="745.0" prefWidth="1578.0">
+         <columns>
+            <TableColumn prefWidth="180.0" text="Oder Date " />
+            <TableColumn prefWidth="172.00003051757812" text="Item Code" />
+            <TableColumn prefWidth="259.0" text="Description" />
+            <TableColumn prefWidth="235.0" text="Unit Price" />
+            <TableColumn prefWidth="248.0" text="Order Qty" />
+            <TableColumn prefWidth="219.0" text="Discount " />
+            <TableColumn prefWidth="266.0" text="Total" />
+         </columns>
+      </TableView>
+      <Label layoutX="254.0" layoutY="58.0" text="ex :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1540.0" layoutY="972.0" text="TOTAL :">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="1630.0" layoutY="974.0" text="0000.00" textFill="#cd0f0f">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

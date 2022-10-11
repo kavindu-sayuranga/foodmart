@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="apnMain" prefHeight="1041.0" prefWidth="1819.0" style="-fx-background-color: #e1e1e1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.foodmart.superMarket.controller.MainReportsFormController">
+   <children>
+      <TableView fx:id="tblMostItem" layoutX="108.0" layoutY="466.0" prefHeight="439.0" prefWidth="788.0">
+         <columns>
+            <TableColumn prefWidth="142.0" text="Item Code" />
+            <TableColumn prefWidth="188.0" text="Description" />
+            <TableColumn prefWidth="151.0" text="Pack Size" />
+            <TableColumn prefWidth="127.0" text="Unit Price" />
+            <TableColumn prefWidth="179.0" text="Qty" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblLeastItem" layoutX="929.0" layoutY="465.0" prefHeight="439.0" prefWidth="788.0">
+         <columns>
+            <TableColumn prefWidth="158.0" text="Item Code" />
+            <TableColumn prefWidth="173.0" text="Description" />
+            <TableColumn prefWidth="121.3333740234375" text="Pack Size" />
+            <TableColumn prefWidth="167.3333740234375" text="Unit Price" />
+            <TableColumn prefWidth="168.3333740234375" text="Qty" />
+         </columns>
+      </TableView>
+      <Label layoutX="110.0" layoutY="379.0" text="Most Movable Item">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="931.0" layoutY="378.0" text="Least Movable Item">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="179.0" layoutY="95.0" onAction="#btnDailyReportOnAction" prefHeight="108.0" prefWidth="454.0" style="-fx-background-color: #a905b5;" text="Daily Income Report" textFill="WHITE">
+         <font>
+            <Font size="34.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../SuperMarketCopy/src/lk/para/superMarket/view/assets/image/editgraph.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="679.0" layoutY="94.0" onAction="#btnMonthlyReportOnAction" prefHeight="108.0" prefWidth="454.0" style="-fx-background-color: #a905b5;" text="Monthly Income Report" textFill="WHITE">
+         <font>
+            <Font size="34.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../SuperMarketCopy/src/lk/para/superMarket/view/assets/image/editgraph.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnAnually" contentDisplay="TOP" layoutX="1184.0" layoutY="95.0" onAction="#btnAnuallyReportOnAction" prefHeight="108.0" prefWidth="454.0" style="-fx-background-color: #a905b5;" text="Annually Income Report" textFill="WHITE">
+         <font>
+            <Font size="34.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../SuperMarketCopy/src/lk/para/superMarket/view/assets/image/editgraph.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

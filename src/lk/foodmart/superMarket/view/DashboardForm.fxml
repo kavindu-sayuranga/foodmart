@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1041.0" prefWidth="1819.0" style="-fx-background-color: #e1e1e1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.foodmart.superMarket.controller.DashboardFormController">
+   <children>
+      <Pane layoutX="235.0" layoutY="118.0" prefHeight="275.0" prefWidth="383.0" style="-fx-background-radius: 25% 10%25% 10%; -fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER" layoutX="121.0" layoutY="65.0" text="Total Orders" textFill="#a905b5">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalOrder" alignment="CENTER" layoutX="173.0" layoutY="139.0" text="00" textFill="#a905b5">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="715.0" layoutY="113.0" prefHeight="275.0" prefWidth="383.0" style="-fx-background-radius: 25% 10%; -fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER" layoutX="130.0" layoutY="73.0" text="Items Type" textFill="#a905b5">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblItemType" alignment="CENTER" layoutX="172.0" layoutY="147.0" text="00" textFill="#a905b5">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="1196.0" layoutY="109.0" prefHeight="275.0" prefWidth="383.0" style="-fx-background-radius: 25% 10%; -fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="110.0" layoutY="63.0" text="Total Customers" textFill="#a905b5">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalCustomer" layoutX="171.0" layoutY="145.0" text="00" textFill="#a905b5">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="40.0" layoutX="159.0" layoutY="498.0" stroke="#a905b5" strokeType="INSIDE" width="606.0" />
+      <TextField fx:id="txtSearchItem" layoutX="229.0" layoutY="506.0" onKeyReleased="#searchItemOnAction" prefHeight="25.0" prefWidth="522.0" promptText="Search any of data" />
+      <Separator layoutX="207.0" layoutY="506.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="167.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../ParaSuperMarket/src/lk/para/superMarket/view/assets/image/search.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblItem" layoutX="159.0" layoutY="597.0" prefHeight="359.0" prefWidth="606.0">
+         <columns>
+            <TableColumn prefWidth="137.0" text="Item Code" />
+            <TableColumn prefWidth="333.0" text="Description" />
+            <TableColumn prefWidth="135.0" text="Unit Price" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblCustomer" layoutX="959.0" layoutY="596.0" prefHeight="359.0" prefWidth="599.0">
+         <columns>
+            <TableColumn prefWidth="162.0" text="Customer ID" />
+            <TableColumn prefWidth="164.0" text="Item Code" />
+            <TableColumn prefWidth="272.0" text="Description" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbSelectCustomer" focusColor="#02541c" layoutX="959.0" layoutY="508.0" prefHeight="25.0" prefWidth="212.0" promptText="Select Customer" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1041.0" prefWidth="1819.0" style="-fx-background-color: #e1e1e1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.foodmart.superMarket.controller.AllOrdersFormController">
+   <children>
+      <Label layoutX="797.0" layoutY="218.0" text="Order Details :">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e1e1" height="51.0" layoutX="1055.0" layoutY="218.0" stroke="#a905b5" strokeType="INSIDE" width="438.0" />
+      <TextField fx:id="txtSearchOrderDetails" layoutX="1162.0" layoutY="223.0" onKeyReleased="#searchOrderDetailOnAction" prefHeight="42.0" prefWidth="286.0" promptText="Search any of data" style="-fx-background-color: #e1e1e1;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="1121.0" layoutY="233.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="5.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1074.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/search.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="248.0" layoutY="216.0" text="Order :">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e1e1" height="51.0" layoutX="383.0" layoutY="216.0" stroke="#a905b5" strokeType="INSIDE" width="399.0" />
+      <TextField fx:id="txtSearchOrder" layoutX="476.0" layoutY="221.0" onKeyReleased="#searchOrderOnAction" prefHeight="42.0" prefWidth="286.0" promptText="Search any of data" style="-fx-background-color: #e1e1e1;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="449.0" layoutY="231.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="5.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="402.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/search.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblOrderDetails" layoutX="768.0" layoutY="425.0" prefHeight="437.0" prefWidth="809.0">
+         <columns>
+            <TableColumn prefWidth="138.0" text="Order ID" />
+            <TableColumn prefWidth="141.0" text="Item Code" />
+            <TableColumn prefWidth="125.0" text="Qty" />
+            <TableColumn prefWidth="135.0" text="Unit Price" />
+            <TableColumn prefWidth="135.0" text="Discount" />
+            <TableColumn prefWidth="135.0" text="Total" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblOrder" layoutX="247.0" layoutY="425.0" prefHeight="437.0" prefWidth="522.0">
+         <columns>
+            <TableColumn prefWidth="166.0" text="Order ID" />
+            <TableColumn prefWidth="174.0" text="Date " />
+            <TableColumn prefWidth="180.0" text="Customer ID" />
+         </columns>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuItemDeleteOnAction" text="Delete" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label layoutX="1329.0" layoutY="917.0" text="TOTAL : ">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDetailsTotal" layoutX="1454.0" layoutY="920.0" text="0000.00" textFill="#b33939">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

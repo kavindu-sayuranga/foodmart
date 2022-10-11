@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainAnchorePane" prefHeight="511.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.foodmart.superMarket.controller.LoginFormController">
+   <children>
+      <AnchorPane prefHeight="108.0" prefWidth="368.0" style="-fx-background-color: #a905b5;">
+         <children>
+            <Text fill="WHITE" layoutX="89.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Mart ">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="151.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="54.0" layoutY="178.0" onKeyReleased="#textFieldValidationOnAction" prefHeight="42.0" prefWidth="248.0" promptText="Username" />
+      <JFXPasswordField fx:id="pwdPassword" labelFloat="true" layoutX="57.0" layoutY="246.0" onKeyReleased="#passwordFieldValidationOnAction" prefHeight="42.0" prefWidth="248.0" promptText="Password" />
+      <JFXButton fx:id="btnLogin" layoutX="92.0" layoutY="400.0" onAction="#btnLoginOnAction" prefHeight="49.0" prefWidth="192.0" style="-fx-background-color: #a905b5;" text="Login" textFill="WHITE" />
+      <JFXComboBox fx:id="cmbSelectType" labelFloat="true" layoutX="57.0" layoutY="326.0" prefHeight="25.0" prefWidth="248.0" promptText="Select Type" />
+   </children>
+</AnchorPane>
